@@ -1,0 +1,3 @@
+the no of character is:876
+the no of words is:94
+the no of line is:37

@@ -1,0 +1,31 @@
+1:package iostreams;
+2:
+3:import java.io.*;
+4:
+5:public class filereader {
+6:	public static void main(String[] args) throws IOException {
+7:		FileReader fr = new FileReader("C:/Users/Ram Charan/eclipse-workspace/java/src/iostreams/filereader.java");
+8:		
+9:		FileWriter fw = new FileWriter("C:/Users/Ram Charan/OneDrive/Desktop/java/40 questions/files/filedemo.txt");
+10:		
+11:		System.out.println("File Read and written Done");
+12:		
+13:		int i;
+14:		int line = 1;
+15:		fw.write(line+":");
+16:		while((i = fr.read()) != -1) {
+17:			char ch = (char)i;
+18:			fw.write(ch);
+19:			
+20:			if(i == '\n') {
+21:				line++;
+22:				fw.write(line+":");
+23:			}
+24:		}
+25:		System.out.println("File Number with lines correctly");
+26:		fr.close();
+27:		fw.close();
+28:		
+29:	}
+30:}
+31:
